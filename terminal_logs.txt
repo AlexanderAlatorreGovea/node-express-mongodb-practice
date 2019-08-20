@@ -1,0 +1,14 @@
+//will console.log the the console logs of the module 
+node app.js
+mkdir npm-demo //to create a directory
+cd npm-demo
+npm init //to create a package .json
+
+//faster way to create package .json    
+    npm init --yes
+
+
+//you can call nodemon index.js for nodemon to watch all your files
+    nodemon index.js
+//to set an environment variable to listen in port 5000 when you use it in th terminal
+    export PORT=5000
