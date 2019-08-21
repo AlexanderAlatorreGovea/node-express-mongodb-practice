@@ -1,0 +1,6 @@
+//npm install config
+//to manage configuration of the appllication
+//you can set different json files and export them
+//developement.json will only be sent to developement environment
+//productions.json will only be sent to production
+//you should not store the passport or anything

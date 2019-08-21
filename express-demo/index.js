@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi');
 const express = require('express');
 const app = express();
 
+
 //app.use to use middleware
 app.use(express.json());
 
@@ -66,6 +67,7 @@ const courses = [
     { id: 2, name: 'courses1'},
     { id: 3, name: 'courses1'}
 ];
+
 app.get('/api/courses', (req, res) => {
     res.send(courses); 
 });
@@ -173,4 +175,16 @@ app.delete('/api/courses/:id', (req, res) => {
     courses.splice(index, 1);
     //
     res.send(course);
-})
+});
+
+
+app.set('view engine', 'pug');
+
+app.set('views', './views');
+
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'My Express App',
+        message: 'Hello'
+    })
+});
